@@ -64,7 +64,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "MIT World Peace University, Pune",
-      logo: require("./assets/images/mitlogo.jpeg"),
+      logo: require("./assets/images/mit-logo.jpeg"),
       subHeader: "B.Tech – Electrical and Computer Engineering",
       duration: "2023 – Present"
     }
