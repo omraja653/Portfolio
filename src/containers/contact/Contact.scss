@@ -1,15 +1,18 @@
 @import "../../_globalColor";
 
+/* ===============================
+   LAYOUT & TYPOGRAPHY
+   =============================== */
 .contact-div-main {
   display: flex;
 }
 
-.dark-mode a {
-  color: $textColorDark;
-}
-
 .contact-div-main > * {
   flex: 1;
+}
+
+.dark-mode a {
+  color: $textColorDark;
 }
 
 .contact-title {
@@ -52,36 +55,124 @@
   margin-top: -4rem;
 }
 
-/* Media Query */
+/* ===============================
+   MEDIA QUERIES
+   =============================== */
 @media (max-width: 1380px), (max-width: 768px) {
-  .contact-title {
-    font-size: 56px;
-    font-weight: 400;
-    text-align: center;
-  }
-
   .contact-title {
     font-size: 40px;
     text-align: center;
   }
-
   .contact-subtitle {
     font-size: 16px;
     line-height: normal;
     text-align: center;
   }
-
   .contact-text-div {
     text-align: center;
     margin-top: 1.5rem;
   }
-
   .contact-detail,
   .contact-detail-email {
     font-size: 20px;
   }
-
   .contact-image-div {
     display: none;
   }
 }
+
+/* ===============================
+   CONTACT FORM (GRID FIX)
+   =============================== */
+
+.contact-form {
+  margin-top: 35px;
+  width: 200%;
+  max-width: 900px;
+}
+
+/* 🔥 USE GRID INSTEAD OF FLEX */
+.contact-form .form-row {
+  display: grid;                 /* Grid forces layout better than Flex here */
+  grid-template-columns: 1fr 1fr; /* Create two equal columns */
+  gap: 20px;                     /* Space between them */
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+/* INPUTS + TEXTAREA */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;                   /* Fill the grid column completely */
+  box-sizing: border-box;        /* Ensure padding doesn't add to width */
+  padding: 22px 24px;
+
+  background: transparent;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+  font-size: 17px;
+  font-family: inherit;
+  
+  /* Force appearance */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Force Height on Inputs */
+.contact-form .form-row input {
+  height: 68px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* MESSAGE BOX */
+.contact-form textarea {
+  min-height: 240px;
+  resize: none;
+  margin-bottom: 28px;
+}
+
+/* BUTTON */
+.contact-form button {
+  margin-left: auto;
+  display: block;
+
+  padding: 16px 30px;
+  border-radius: 16px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5d77a;
+
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* Change grid to 1 column on mobile */
+  .contact-form .form-row {
+    grid-template-columns: 1fr; 
+  }
+
+  .contact-form .form-row input {
+  flex: 1;
+  min-height: 72px;          /* 🔥 taller box */
+  padding: 24px 26px;        /* 🔥 more inner space */
+  font-size: 18px;           /* 🔥 text looks bigger */
+  line-height: 1.4;          /* 🔥 vertical balance */
+}
+}
+/* FINAL FIX: MAKE NAME & EMAIL VISIBLY BIG */
+
+
