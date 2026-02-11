@@ -64,7 +64,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "MIT World Peace University, Pune",
-      logo: require("/images/mit-logo.jpeg"),
+      logo: ("/mit-logo.jpeg"),
       subHeader: "B.Tech – Electrical and Computer Engineering",
       duration: "2023 – Present"
     }
@@ -125,7 +125,12 @@ const achievementSection = {
         "Certification covering core Java programming concepts along with fundamental data structures and algorithms.",
       image: require("./assets/images/certificate.png"),
       imageAlt: "Java DSA Certificate",
-      footerLink: []
+      footerLink: [
+        {
+          name: "View Certificate",
+          url: "https://certificate.codingninjas.com/view/026fe425bd6ec6dd"
+        }
+      ]
     }
   ],
   display: true
