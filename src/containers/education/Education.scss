@@ -23,16 +23,49 @@
   padding-top: 20px;
 }
 
+/* ===============================
+   EDUCATION LOGO FIX (IMPORTANT)
+   =============================== */
+
+/* handles circular clipping issue */
+.education-roundedimg img,
+.education-card-logo img {
+  width: 140px;          /* bigger logo */
+  height: auto;
+  border-radius: 12px;   /* remove circle */
+  object-fit: contain;
+  background: transparent;
+}
+
+/* align logo properly */
+.education-roundedimg,
+.education-card-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
 @media (max-width: 1380px) {
   .education-card-container {
     padding-top: 0px;
   }
+
   .education-heading {
     font-size: 40px;
   }
+
   .education-text-subtitle {
     font-size: 18px;
     text-align: center;
+  }
+
+  .education-roundedimg img,
+  .education-card-logo img {
+    width: 120px;
   }
 }
 
@@ -40,21 +73,28 @@
   .education-card-container {
     padding-top: 0px;
   }
+
   .education-heading {
     font-size: 30px;
     text-align: center;
   }
+
   .education-text-subtitle {
     font-size: 16px;
   }
-}
-/* ===============================
-   EDUCATION LOGO SIZE FIX
-   =============================== */
 
-.education-card-logo img {
-  width: 160px;        /* 🔥 BIGGER LOGO */
-  height: auto;        /* keep aspect ratio */
-  border-radius: 10px; /* 🔥 remove circular look */
-  object-fit: contain;
+  .education-roundedimg img,
+  .education-card-logo img {
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .education-card-logo {
+    margin-bottom: 20px;
+  }
 }

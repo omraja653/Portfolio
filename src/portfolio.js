@@ -24,7 +24,7 @@ const greeting = {
   subTitle: emoji(
     "Electrical & Computer Engineering student 🚀 interested in Web Development, AI applications, and Blockchain-based systems."
   ),
-  resumeLink: "",
+  resumeLink: "/resume/Om_Raja_Resume_2025.pdf", // ✅ Resume link added
   displayGreeting: true
 };
 
@@ -64,7 +64,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "MIT World Peace University, Pune",
-      logo: ("/mit-logo.jpeg"),
+      logo: "/mit-logo.jpeg", // ✅ from public folder
       subHeader: "B.Tech – Electrical and Computer Engineering",
       duration: "2023 – Present"
     }
@@ -79,7 +79,7 @@ const techStack = {
 };
 
 /* ===============================
-   ACADEMIC PROJECTS (BIG VIEW)
+   ACADEMIC PROJECTS
    =============================== */
 const bigProjects = {
   title: "Academic Projects",
@@ -89,11 +89,11 @@ const bigProjects = {
       image: require("./assets/images/project.png"),
       projectName: "Predictive Maintenance of Vehicles Using AI",
       projectDesc:
-        "An AI-based academic project designed to predict potential vehicle failures using historical and sensor-based data. The system helps in reducing downtime and improving maintenance efficiency.",
+        "An AI-based academic project designed to predict potential vehicle failures using historical and sensor-based data, helping reduce downtime and improve maintenance efficiency.",
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/omraja653"
+          url: "https://ibb.co/Myb2LKVS"
         }
       ]
     },
@@ -102,11 +102,11 @@ const bigProjects = {
       projectName:
         "Blockchain-Enabled P2P Energy Trading with Automated T&D Loss Traceability",
       projectDesc:
-        "An ongoing academic project focused on enabling peer-to-peer energy trading using blockchain technology while ensuring transparent tracking of transmission and distribution losses.",
+        "An ongoing academic project enabling peer-to-peer energy trading using blockchain technology with transparent tracking of transmission and distribution losses.",
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/omraja653"
+          url: "https://ibb.co/LDgQnNHynpm"
         }
       ]
     }
@@ -128,7 +128,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View Certificate",
-          url: "https://certificate.codingninjas.com/view/026fe425bd6ec6dd"
+          url: "https://ibb.co/NHk0T3Q"
         }
       ]
     }
@@ -142,9 +142,15 @@ const openSource = { display: false };
 const blogSection = { display: false };
 const talkSection = { display: false };
 const podcastSection = { display: false };
-const resumeSection = { display: false };
 
-/* Contact Section (Form handled in UI) */
+/* Resume Section */
+const resumeSection = {
+  title: "Resume",
+  subtitle: "View or download my resume",
+  display: true
+};
+
+/* Contact Section */
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Feel free to connect for academic or project-related discussions",

@@ -62,3 +62,9 @@
     order: 2;
   }
 }
+@media (max-width: 768px) {
+  .skills-main-div {
+    flex-direction: column;
+    text-align: center;
+  }
+}

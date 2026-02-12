@@ -19,7 +19,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Devloped by OM RAJA
+            © 2026 Om Raja · Built with curiosity, code & caffeine ☕💻
           </a>
         </p>
       </div>

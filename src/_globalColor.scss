@@ -88,3 +88,19 @@ $medium: #000;
 $stackoverflow: #f48024;
 $instagram: #c13584;
 $kaggle: #20beff;
+/* ===============================
+   GLOBAL RESPONSIVE FIX
+   =============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -125,3 +125,17 @@
     width: auto;
   }
 }
+@media (max-width: 768px) {
+  .greeting-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .greeting-text-div {
+    width: 100%;
+  }
+
+  .greeting-image-div {
+    margin-top: 30px;
+  }
+}

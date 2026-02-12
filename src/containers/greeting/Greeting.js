@@ -14,6 +14,7 @@ export default function Greeting() {
   if (!greeting.displayGreeting) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -23,10 +24,10 @@ export default function Greeting() {
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
-                {" "}
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
+
               <p
                 className={
                   isDark
@@ -36,22 +37,28 @@ export default function Greeting() {
               >
                 {greeting.subTitle}
               </p>
+
               <div id="resume" className="empty-div"></div>
+
               <SocialMedia />
+
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
+
                 {greeting.resumeLink && (
                   <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
+  href={greeting.resumeLink}
+  download
+  className="download-link-button"
+>
+  <Button text="Download my resume" />
+</a>
+
                 )}
               </div>
             </div>
           </div>
+
           <div className="greeting-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
@@ -59,7 +66,7 @@ export default function Greeting() {
               <img
                 alt="man sitting on table"
                 src={require("../../assets/images/manOnTable.svg")}
-              ></img>
+              />
             )}
           </div>
         </div>
