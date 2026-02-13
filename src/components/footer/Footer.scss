@@ -13,3 +13,18 @@
   margin-top: 2rem;
   padding-bottom: 1rem;
 }
+/* ===============================
+   FOOTER COLOR FIX (THEME BASED)
+   =============================== */
+
+/* Light Theme */
+.footer-text,
+.footer-text a {
+  color: #000000 !important;
+}
+
+/* Dark Theme */
+.dark-footer .footer-text,
+.dark-footer .footer-text a {
+  color: #ffffff !important;
+}
