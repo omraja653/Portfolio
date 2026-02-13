@@ -34,3 +34,8 @@ body {
     line-height: normal;
   }
 }
+/* Prevent horizontal scroll on mobile */
+html,
+body {
+  overflow-x: hidden;
+}

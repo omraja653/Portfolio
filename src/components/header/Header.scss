@@ -180,3 +180,16 @@
     font-size: 12px;
   }
 }
+/* ===============================
+   LOGO COLOR FIX (THEME BASED)
+   =============================== */
+
+/* Light Theme */
+.header .logo-name {
+  color: #000000 !important;
+}
+
+/* Dark Theme */
+.dark-menu .logo-name {
+  color: #ffffff !important;
+}
