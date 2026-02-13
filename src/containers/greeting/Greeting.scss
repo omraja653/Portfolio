@@ -6,6 +6,7 @@
   margin: 0px auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
@@ -17,17 +18,13 @@
   display: flex;
 }
 
-.subTitle {
-  color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
-}
-
 .greeting-main > * {
   flex: 1;
   margin-bottom: 30px;
+}
+
+.subTitle {
+  color: $subTitle !important;
 }
 
 .empty-div {
@@ -38,14 +35,25 @@
   display: flex;
   margin-top: 40px;
 }
+
 .download-link-button {
   text-decoration: none;
 }
 
+/* ===============================
+   GREETING TITLE – THEME FIX
+   =============================== */
+
+/* Light Theme (default) */
 .greeting-text {
   font-size: 70px;
   line-height: 1.1;
-  color: $textColor !important;
+  color: #000000 !important;
+}
+
+/* Dark Theme */
+.dark-mode .greeting-text {
+  color: #ffffff !important;
 }
 
 .greeting-text-p {
@@ -58,6 +66,7 @@
   height: auto;
 }
 
+/* Wave emoji animation */
 .wave-emoji {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
@@ -90,7 +99,10 @@
   }
 }
 
-/* Media Query */
+/* ===============================
+   RESPONSIVE FIXES
+   =============================== */
+
 @media (max-width: 1380px) {
   .greeting-text {
     font-size: 50px;
@@ -99,59 +111,12 @@
     font-size: 20px;
   }
 }
-@media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-  .greeting-main {
-    display: block;
-  }
-  .greeting-image-div {
-    height: 256px;
-  }
-}
-
-@media (max-width: 320px) {
-  .main {
-    width: auto;
-  }
-}
-@media (max-width: 768px) {
-  .greeting-main {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .greeting-text-div {
-    width: 100%;
-  }
-
-  .greeting-image-div {
-    margin-top: 30px;
-  }
-}
-/* ===============================
-   MOBILE RESPONSIVE FIX – GREETING
-   =============================== */
 
 @media (max-width: 768px) {
   .greeting-main {
     flex-direction: column;
     text-align: center;
     padding: 0 16px;
-  }
-
-  .greeting-text-div {
-    width: 100%;
   }
 
   .greeting-text {
@@ -184,5 +149,11 @@
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: auto;
   }
 }
