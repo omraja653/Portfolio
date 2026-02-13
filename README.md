@@ -71,3 +71,13 @@ Clone the repository:
 ```bash
 git clone https://github.com/omraja653/om-raja-portfolio.git
 cd om-raja-portfolio
+
+
+Install dependencies:
+
+npm install
+
+
+Start development server:
+
+npm start
